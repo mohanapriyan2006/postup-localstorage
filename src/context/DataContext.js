@@ -9,9 +9,7 @@ const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
   const navigate = useNavigate();
-  const [posts, setPosts] = useState(
-    []
-  );
+  const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [postTitle, setPostTitle] = useState("");
@@ -53,7 +51,7 @@ export const DataProvider = ({ children }) => {
         body: "Search Engine Optimization remains a cornerstone of digital marketing. With constant algorithm updates, staying informed and optimizing content for search engines is crucial for driving organic traffic.",
       },
     ];
-    localStorage.setItem("postup-posts",JSON.stringify(initData));
+    localStorage.setItem("postup-posts", JSON.stringify(initData));
     setPosts(JSON.parse(localStorage.getItem("postup-posts")));
   }, []);
 
@@ -78,15 +76,13 @@ export const DataProvider = ({ children }) => {
 
     const newPost = { id: `${id}`, title: postTitle, datatime, body: postBody };
     try {
-      
-      const allPosts = [...posts,newPost];
-      localStorage.setItem("postup-posts",JSON.stringify(allPosts));
+      const allPosts = [...posts, newPost];
+      localStorage.setItem("postup-posts", JSON.stringify(allPosts));
       setPosts(allPosts);
       setPostBody("");
       setPostTitle("");
       navigate("/");
-       alert("Your post successfully posted ✅");
-
+      alert("Your post successfully posted ✅");
     } catch (err) {
       console.log(`Error: ${err.message}`);
     }
@@ -97,7 +93,7 @@ export const DataProvider = ({ children }) => {
   const handleDelete = async (id) => {
     try {
       const postList = posts.filter((post) => post.id !== id);
-      localStorage.setItem("postup-posts",JSON.stringify(postList));
+      localStorage.setItem("postup-posts", JSON.stringify(postList));
       setPosts(postList);
 
       navigate("/");
@@ -118,14 +114,15 @@ export const DataProvider = ({ children }) => {
         datatime: date,
         body: editBody,
       };
-      const allPosts = posts.map((post) => (post.id === id ? { ...editedPost } : post));
-      localStorage.setItem("postup-posts",JSON.stringify(allPosts));
+      const allPosts = posts.map((post) =>
+        post.id === id ? { ...editedPost } : post
+      );
+      localStorage.setItem("postup-posts", JSON.stringify(allPosts));
       setPosts(allPosts);
       setEditBody("");
       setEditTitle("");
       navigate("/");
       alert("Post successfully edited ✅");
-
     } catch (err) {
       console.log(`Error: ${err.message}`);
     }
