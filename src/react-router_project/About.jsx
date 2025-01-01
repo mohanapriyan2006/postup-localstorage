@@ -30,7 +30,7 @@ export const About = () => {
         </div>
       </center>
       <center>
-        <div class="contact">
+        <div className="contact">
         <h2>Contact Us</h2>
           <form onSubmit={handleContact}>
             <label>Name</label>
@@ -39,7 +39,7 @@ export const About = () => {
             <input type="email" required />
             <label>Message</label>
             <textarea required></textarea>
-            <div class="btn">
+            <div className="btn">
               <button type="submit">send</button>
             </div>
           </form>
