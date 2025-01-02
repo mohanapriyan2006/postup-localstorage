@@ -1,14 +1,14 @@
 import "./App.css";
 import React from "react";
-import { Home } from "./react-router_project/Home";
-import { NewPost } from "./react-router_project/NewPost";
-import { PostPage } from "./react-router_project/PostPage";
-import { About } from "./react-router_project/About";
-import { Missing } from "./react-router_project/Missing";
-import { Footer } from "./react-router_project/Footer";
-import { Nav } from "./react-router_project/Nav";
+import { Home } from "./components/Home";
+import { NewPost } from "./components/NewPost";
+import { PostPage } from "./components/PostPage";
+import { About } from "./components/About";
+import { Missing } from "./components/Missing";
+import { Footer } from "./components/Footer";
+import { Nav } from "./components/Nav";
 import { Route, Routes } from "react-router-dom";
-import EditPost from "./react-router_project/EditPost";
+import EditPost from "./components/EditPost";
 import { DataProvider } from "./context/DataContext";
 
 const App = () => {

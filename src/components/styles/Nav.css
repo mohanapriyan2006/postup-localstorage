@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 15%;
+  height: 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 
 }
@@ -256,12 +256,18 @@ nav form input {
 }
 
 @media screen and (max-width: 600px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    height: 12%;
-  }
+  
   .content {
     margin-top: 120px;
   }
+  .nav-div{
+    height: 110px;
+  }
+  .nav-div nav{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+  }
+  
+
 }
