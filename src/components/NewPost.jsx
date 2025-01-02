@@ -24,7 +24,7 @@ export const NewPost = () => {
           onChange={(e) => setPostBody(e.target.value)}
         />
         <div className="btn">
-          <button type="submit">Submit</button>
+          <button type="submit" className="post-btn">Submit</button>
         </div>
       </form>
     </main>

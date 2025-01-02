@@ -40,7 +40,7 @@ export const About = () => {
             <label>Message</label>
             <textarea required></textarea>
             <div className="btn">
-              <button type="submit">send</button>
+              <button className="contact-btn" type="submit">send</button>
             </div>
           </form>
         </div>
