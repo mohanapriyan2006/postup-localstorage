@@ -4,12 +4,29 @@ import { FaLaptop, FaMobileAlt, FaTabletAlt } from "react-icons/fa";
 import DataContext from "../context/DataContext";
 
 export const Nav = ({ title }) => {
-  const { width, search, setSearch,navigate } = useContext(DataContext);
+  const { width, search, setSearch, navigate } =
+    useContext(DataContext);
   return (
     <div className="nav-div">
       <header>
-        <h1 className="header" onClick={()=>navigate('/')}>
-        <img style={{height: '30px',width : '30px',position : 'relative',top: '10px',right: '10px'}} src="icon.png" alt="icon"/>
+        <h1
+          className="header"
+          onClick={() => {
+            navigate("/");
+            setSearch('')
+          }}
+        >
+          <img
+            style={{
+              height: "30px",
+              width: "30px",
+              position: "relative",
+              top: "10px",
+              right: "10px",
+            }}
+            src="icon.png"
+            alt="icon"
+          />
           {title}
           <i>
             {width < 768 ? (

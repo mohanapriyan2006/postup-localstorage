@@ -8,11 +8,18 @@ import { useNavigate } from "react-router-dom";
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
+
+
   const navigate = useNavigate();
   const [posts, setPosts] = useState(
-    JSON.parse(
-      localStorage.getItem("postup-posts")
-    )
+    () => {
+        const postList = JSON.parse(localStorage.getItem("postup-posts"));
+        if(postList){
+          return postList
+        }else{
+          return [];
+        }
+    }
   );
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -22,6 +29,7 @@ export const DataProvider = ({ children }) => {
   const [editBody, setEditBody] = useState("");
   const { width } = useWindowSize();
 
+ 
 
   // search
 
@@ -73,7 +81,7 @@ export const DataProvider = ({ children }) => {
 
   // edit page
 
-  const handleEdit = async (id,e) => {
+  const handleEdit = async (id, e) => {
     e.preventDefault();
     try {
       const date = format(new Date(), "MMMM dd, yyyy pp");
