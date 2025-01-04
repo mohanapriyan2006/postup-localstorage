@@ -73,7 +73,8 @@ export const DataProvider = ({ children }) => {
 
   // edit page
 
-  const handleEdit = async (id) => {
+  const handleEdit = async (id,e) => {
+    e.preventDefault();
     try {
       const date = format(new Date(), "MMMM dd, yyyy pp");
       const editedPost = {

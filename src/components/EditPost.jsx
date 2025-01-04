@@ -20,7 +20,7 @@ const EditPost = () => {
       {editTitle && (
         <>
           <h2>Edit Post</h2>
-          <form className="newPostForm" onSubmit={(e) => e.preventDefault()}>
+          <form className="newPostForm" onSubmit={(e) => handleEdit(id,e)}>
             <label>Title:</label>
             <input
               type="text"
@@ -37,7 +37,7 @@ const EditPost = () => {
               onChange={(e) => setEditBody(e.target.value)}
             />
             <div className="btn">
-              <button type="submit" className="post-btn" onClick={() => handleEdit(id)}>
+              <button type="submit" className="post-btn" >
                 Submit
               </button>
             </div>
