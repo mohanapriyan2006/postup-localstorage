@@ -13,8 +13,8 @@
   top: 0;
   width: 100%;
   height: 90px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 nav div {
   display: flex;
@@ -65,9 +65,8 @@ nav form input {
   cursor: pointer;
 }
 
-.header:hover{
+.header:hover {
   color: rgb(171, 255, 167);
-
 }
 
 .header i {
@@ -132,7 +131,8 @@ nav form input {
   text-align: center;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .NewPost .newPostForm {
@@ -148,11 +148,13 @@ nav form input {
 }
 
 .NewPost .newPostForm input[type="text"] {
+  border: solid rgb(76, 203, 18) 1px;
   height: 20px;
 }
-.post-body{
-    resize: none;
-    height: 100px;
+.post-body {
+  border: solid rgb(76, 203, 18) 1px;
+  resize: none;
+  height: 100px;
 }
 .NewPost .newPostForm .post-btn {
   position: relative;
@@ -200,9 +202,8 @@ nav form input {
   margin: 10px 0 0 0;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-
-  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .contact {
@@ -213,7 +214,8 @@ nav form input {
   margin-top: 4rem;
   border-radius: 10px;
   padding-bottom: 1%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .contact form {
@@ -229,7 +231,7 @@ nav form input {
 
 .contact input {
   margin-bottom: 10px;
-  border: solid rgb(176, 122, 22) 1px;
+  border: solid rgb(76, 203, 18) 1px;
   border-radius: 5px;
   height: 30px;
 }
@@ -240,7 +242,8 @@ nav form input {
 
 .contact textarea {
   height: 140px;
-  border: solid rgb(176, 122, 22) 1px;
+  border: solid rgb(76, 203, 18) 1px;
+
   border-radius: 5px;
 }
 
@@ -248,8 +251,9 @@ nav form input {
   margin-top: 5px;
   width: 80px;
   padding: 2px;
-  border: solid green 1.4px;
-  background-color: rgb(98, 221, 17);
+  border: solid green;
+  background-color: green;
+  color: white;
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
@@ -259,28 +263,27 @@ nav form input {
   justify-self: center;
 }
 .contact .contact-btn:hover {
-  background-color: rgb(107, 236, 20);
+  background-color: rgb(10, 167, 10);
 }
 
-.Home{
+.Home {
   margin-bottom: 30%;
 }
 
 @media screen and (max-width: 600px) {
-  
   .content {
     margin-top: 150px;
   }
-  .nav-div{
+  .nav-div {
     height: 110px;
   }
-  .nav-div nav{
+  .nav-div nav {
     display: flex;
     flex-direction: column;
     height: 70px;
   }
-  .contact{
-  margin: 40px 2px;
-  width: 80%;
+  .contact {
+    margin: 40px 2px;
+    width: 80%;
   }
 }
