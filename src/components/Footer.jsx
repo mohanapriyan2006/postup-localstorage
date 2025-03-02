@@ -5,7 +5,7 @@ export const Footer = () => {
   const today = new Date();
   return (
     <footer>
-    <p>Copyright &copy; {today.getFullYear()} Designed by <b>Mohanapriyan.M</b> </p>
+    <p>Copyright &copy; {today.getFullYear()} Designed by <a style={{color: "white"}} href="https://mohanapriyan.netlify.app/"><b>Mohanapriyan.M</b></a> </p>
     </footer>
   )
 }
